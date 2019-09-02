@@ -1,0 +1,27 @@
+<!--
+  @File Name          : leadSearchUsingLWC.page
+  @Description        : 
+  @Author             : shubhranshu
+  @Group              : 
+  @Last Modified By   : shubhranshu
+  @Last Modified On   : 3/9/2019, 1:38:36 AM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    3/9/2019   shubhranshu     Initial Version
+-->
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false">
+    <apex:includeLightning />
+    <div id="lightning"></div>
+    <script>
+        $Lightning.use("c:LeadSearchApp", function () {
+            $Lightning.createComponent("c:LeadSearchComponent", {
+                greeting: "LWC test inside Vf page"
+            },
+                "lightning",
+                function (cmp) {
+                    console.log('component created successfully ...');
+
+                });
+        });
+    </script>
+</apex:page>
